@@ -3,13 +3,37 @@
 <head>
 <style>
 table, td {
-  border: 1px solid rgb(62, 4, 4);
+  border: 20px solid rgb(62, 4, 4);
 }
  td {
-    border: 1px solid hsla(336, 73%, 9%, 0.384);
+  
     text-align: left;
     padding: 40px;
   }
+  body, html {
+    height: 100%;
+    margin: 0;
+  }
+
+  .table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+  }
+
+  th, td {
+    border: 1px solid #230606;
+    padding: 20px;
+  }
+</style>
+
+<div class="table-wrapper">
 </style>
 </head>
 <body>
@@ -76,7 +100,7 @@ function myDeleteFunction() {
     document.getElementById("message").innerHTML = "Message: No more rows to delete";
   }
   
-// not able to use this function
+
   
 }
 
