@@ -3,8 +3,13 @@
 <head>
 <style>
 table, td {
-  border: 1px solid black;
+  border: 1px solid rgb(62, 4, 4);
 }
+ td {
+    border: 1px solid hsla(336, 73%, 9%, 0.384);
+    text-align: left;
+    padding: 40px;
+  }
 </style>
 </head>
 <body>
@@ -44,9 +49,11 @@ table, td {
 <script>
 
   let rowCount = 5 
+  let rowCount2 = 5 
     
 function myCreateFunction() {
     rowCount ++ 
+    rowCount2 ++ 
   var table = document.getElementById("myTable");
   var row = table.insertRow(-1);
   var cell1 = row.insertCell(0);
@@ -58,16 +65,19 @@ function myCreateFunction() {
 
 
 function myDeleteFunction() {
-  table = document.getElementById("myTable").deleteRow(0);
 
-  if (table.rows.length > 0) { 
-      table.deleteRow(0); 
-      rowCount--;
+  
+
+  if (rowCount2>0) { 
+    table = document.getElementById("myTable").deleteRow(0);
+    rowCount2--
+      
+  }else{
+    document.getElementById("message").innerHTML = "Message: No more rows to delete";
   }
+  
 // not able to use this function
-  if (table.rows.length === 0) { 
-      document.getElementById("message").innerHTML = "Message: No more rows to delete";
-  }
+  
 }
 
 
