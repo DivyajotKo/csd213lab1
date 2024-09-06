@@ -60,13 +60,13 @@ function myCreateFunction() {
 function myDeleteFunction() {
   table = document.getElementById("myTable");
 
-  if (table.rows.length > 0) { // Check if there are any rows left
-      table.deleteRow(0); // Delete the last row
+  if (table.rows.length > 0) { 
+      table.deleteRow(0); 
       rowCount--;
   }
 
-  if (table.rows.length === 0) { // Check if the table is now empty
-      document.getElementById("message").innerHTML = "Message: No more rows to delete"; // Display the message
+  if (table.rows.length === 0) { 
+      document.getElementById("message").innerHTML = "Message: No more rows to delete";
   }
 }
 
