@@ -58,7 +58,7 @@ function myCreateFunction() {
 
 
 function myDeleteFunction() {
-  table = document.getElementById("myTable");
+  table = document.getElementById("myTable").deleteRow(0);
 
   if (table.rows.length > 0) { 
       table.deleteRow(0); 
